@@ -17,6 +17,17 @@
 
 ### Complete LOG and questionnaire data: 200 records
 
+## Folder Structure
+    .
+    ├── ...
+    ├── output                    
+    │   ├── br.csv              # Students' BookRoll activities (learning behavior)
+    │   ├── score.csv           # Students' final score
+    │   ├── sill.csv            # Students' Strategy Inventory for Language Learning (SILL) measurement results
+    │   ├── srl_motivation.csv  # Students' Self-regulated Learning (SRL) measurement results Learning Motivation
+    |   ├── srl_strategy.csv    # Students' Self-regulated Learning (SRL) measurement results Learning Strategy
+    │   ├── viscode.csv         # Students' VisCode activities (learning behavior)    
+
 
 ## SRL Strategy
 | Feature  | Description                                                                                                     |
