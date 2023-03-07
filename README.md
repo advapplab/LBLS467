@@ -1,4 +1,4 @@
-# LBLS-200
+# LBLS-200 (total: 469)
 
 ## Check List
 | Class     | Participants | SRL Learning Motivation | SRL Learning Strategy | SILL | BookRoll | Viscode | Score |
