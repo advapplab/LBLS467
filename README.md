@@ -28,7 +28,7 @@
     |   ├── srl_strategy.csv    # Students' Self-regulated Learning (SRL) measurement results Learning Strategy
     │   ├── viscode.csv         # Students' VisCode activities (learning behavior)    
 
-
+# Data Formats
 ## SRL Strategy
 | Feature  | Description                                                                                                     |
 | -------- | --------------------------------------------------------------------------------------------------------------- |
@@ -120,3 +120,5 @@
 | srl_m_29 | (Test Anxiety) When I take tests I think of the consequences of failing. |
 | srl_m_30 | (Test Anxiety) I have an uneasy, upset feeling when I take an exam. |
 | srl_m_31 | (Test Anxiety) I feel my heart beating fast when I take an exam. |
+
+For other feature details, please refer to : https://github.com/advapplab/LBLS160
