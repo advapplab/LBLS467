@@ -18,9 +18,47 @@
 ### Complete LOG and questionnaire data: 200 records
 
 
+## SRL Strategy
+| Feature  | Description                                                                                                     |
+| -------- | --------------------------------------------------------------------------------------------------------------- |
+| userid   | Anonymized student userid, eg: b1dfc5c6ec04d46d1823c5fa972ad320.                                                |
+| srl_s_1  | (Rehearsal) When I study for this class, I practice saying the material to myself over and over. |
+| srl_s_2  | (Rehearsal) When studying for this class, I read my class notes and the course readings over and over again. |
+| srl_s_3  | (Rehearsal) I memorize key words to remind me of important concepts in this class. |
+| srl_s_4  | (Rehearsal) I make lists of important terms for this course and memorize the lists.|
+| srl_s_5  | (Elaboration) When I study for this class, I pull together information from different sources, such as lectures, readings, and discussions. |
+| srl_s_6  | (Elaboration) I try to relate ideas in this subject to those in other courses whenever possible. |
+| srl_s_7  | (Elaboration) When reading for this class, I try to relate the material to what I already know. |
+| srl_s_8  | (Elaboration) When I study for this course, I write brief summaries of the main ideas from the readings and the concepts from the lectures. |
+| srl_s_9 | (Elaboration) I try to understand the material in this class by making connections between the readings and the concepts from the lectures. |
+| srl_s_10  | (Elaboration) I try to apply ideas from course readings in other class activities such as lecture and discussion.|
+| srl_s_11 | (Organization) When I study the readings for this course, I outline the material to help me organize my thoughts. |
+| srl_s_12 | (Organization) When I study for this course, I go through the readings and my class notes and try to find the most important ideas. |
+| srl_s_13 | (Organization) I make simple charts, diagrams, or tables to help me organize course material. |
+| srl_s_14 | (Organization) When I study for this course, I go over my class notes and make an outline of important concepts. |
+| srl_m_15 | (Control Beliefs) If I study in appropriate ways, then I will be able to learn the material in this course. |
+| srl_m_16 | (Control Beliefs) It is my own fault if I don't learn the material in this course. |
+| srl_m_17 | (Control Beliefs) If I try hard enough, then I will understand the course material. |
+| srl_m_18 | (Control Beliefs) If I don't understand the course material, it is because I didn't try hard enough. |
+| srl_m_19 | (Self-Efficacy) I believe I will receive an excellent grade in this class. |
+| srl_m_20 | (Self-Efficacy) I'm certain I can understand the most difficult material presented in the readings for this course. |
+| srl_m_21 | (Self-Efficacy) I'm confident I can understand the basic concepts taught in this course. |
+| srl_m_22 | (Self-Efficacy) I'm confident I can understand the most complex material presented by the instructor in this course. |
+| srl_m_23 | (Self-Efficacy) I'm confident I can do an excellent job on the assignments and tests in this course. |
+| srl_m_24 | (Self-Efficacy) I expect to do well in this class. |
+| srl_m_25 | (Self-Efficacy) I'm certain I can master the skills being taught in this class. |
+| srl_m_26 | (Self-Efficacy) Considering the difficulty of this course, the teacher, and my skills, I think I will do well in this class. |
+| srl_m_27 | (Test Anxiety) When I take a test I think about how poorly I am doing compared with other students. |
+| srl_m_28 | (Test Anxiety) When I take a test I think about items on other parts of the test I can't answer. |
+| srl_m_29 | (Test Anxiety) When I take tests I think of the consequences of failing. |
+| srl_m_30 | (Test Anxiety) I have an uneasy, upset feeling when I take an exam. |
+| srl_m_31 | (Test Anxiety) I feel my heart beating fast when I take an exam. |
+
+
 ## SRL Motivation
 | Feature  | Description                                                                                                     |
-| -------- | ---------------------------------------------------------------------------------------------------------------|
+| -------- | --------------------------------------------------------------------------------------------------------------- |
+| userid   | Anonymized student userid, eg: b1dfc5c6ec04d46d1823c5fa972ad320.                                                |
 | srl_m_1  | (Intrinsic) In a class like this, I prefer course material that really challenges me so I can learn new things. |
 | srl_m_2  | (Intrinsic) In a class like this, I prefer course material that arouses my curiosity, even if it is difficult to learn. |
 | srl_m_3  | (Intrinsic) The most satisfying thing for me in this course is trying to understand the content as thoroughly as possible. |
