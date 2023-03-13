@@ -12,7 +12,7 @@
 | 1102-NCU  | 41           | V                       | V                     | V    | V        | V       | V     |
 | 1111-NCU  | 56           | V                       | V                     |      | V        | V       | V     |
 | 1111-NCCU | 59           |                         |                       |      | V        | V       | V     |
-| Record    | 469          | 304                     | 294                   | 254  | 424      | 456     | 469   | 
+| Record    | 469          | 304                     | 294                   | 254  | 463      | 454     | 469   | 
 
 
 ### Complete LOG and questionnaire data: 200 records
