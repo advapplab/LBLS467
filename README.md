@@ -1,5 +1,8 @@
 # LBLS-469
 
+## Data description
+To support the development of advanced methodologies in emerging sciences, data collection is crucial. In the field of education, data is also essential for conceptual frameworks like Learning Analytics (LA) or Intelligent Tutoring Systems (ITS). Previous studies have shown the effectiveness of academic data, such as predicting at-risk students and revealing learning strategies. However, there was a lack of publicly available data sets for benchmarking these experiments. To contribute to educational research and development, we conducted a series of programming courses and collected learning data from 469 students. The data set includes two well-designed learning systems and measurements of two well-defined learning strategies: Self-regulated Learning (SRL) and Strategy Inventory for Language Learning (SILL). This study summarizes this data set as a Learning Behavior and Learning Strategies data set (LBLS-469), where 469 indicates the total number of students.
+
 ## Check List
 | Class     | Participants | SRL Learning Motivation | SRL Learning Strategy | SILL | BookRoll | Viscode | Score |
 | --------- | ------------ | ----------------------- | --------------------- | ---- | -------- | ------- | ----- |
@@ -20,7 +23,7 @@
 ## Folder Structure
     .
     ├── ...
-    ├── output                    
+    ├── data                    
     │   ├── br.csv              # Students' BookRoll activities (learning behavior)
     │   ├── score.csv           # Students' final score
     │   ├── sill.csv            # Students' Strategy Inventory for Language Learning (SILL) measurement results
