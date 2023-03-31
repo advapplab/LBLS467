@@ -34,6 +34,7 @@ To support the development of advanced methodologies in emerging sciences, data 
 # Data Formats
 ## Students' BookRoll activities (learning behavior)
 | Feature               | Description                                                                  |
+| -------- | ------------------------------------------------------------------------------------------|
 | userid                | Anonymized student userid, eg: b1dfc5c6ec04d46d1823c5fa972ad320              | 
 | ADD BOOKMARK	        | Added a bookmark to current page.                                            | 
 | ADD MARKER	        | Added a marker to current page.                                              | 
