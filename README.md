@@ -32,6 +32,15 @@ To support the development of advanced methodologies in emerging sciences, data 
     │   ├── viscode.csv         # Students' VisCode activities (learning behavior)    
 
 # Data Formats
+
+## Students' final score
+| Feature  | Description                                                                               |
+| -------- | ------------------------------------------------------------------------------------------|
+| userid   | Anonymized student userid, eg: b1dfc5c6ec04d46d1823c5fa972ad320                           |
+| score	   | Students' final score, less than 60 indicated failed on this course.                      |
+| class	   | Students' class identity.                                                                 |
+
+
 ## Students' BookRoll activities (learning behavior)
 | Feature               | Description                                                                  |
 | -------- | ------------------------------------------------------------------------------------------|
@@ -61,13 +70,37 @@ To support the development of advanced methodologies in emerging sciences, data 
 | SEARCH_JUMP	        | Jumped to a page from the search results.                                    | 
 | UNDO_HW_MEMO	        | Undo the last action of handwriting.                                         | 
 
-## Students' final score
-| Feature  | Description                                                                               |
-| -------- | ------------------------------------------------------------------------------------------|
-| userid   | Anonymized student userid, eg: b1dfc5c6ec04d46d1823c5fa972ad320                           |
-| score	   | Students' final score, less than 60 indicated failed on this course.                      |
-| class	   | Students' class identity.                                                                 |
-
+## Students' VisCode activities (learning behavior)
+| Feature               | Description                                                                                                     |        
+| --------------------- | --------------------------------------------------------------------------------------------------------------- |
+| userid	            | Anonymized student userid, eg: b1dfc5c6ec04d46d1823c5fa972ad320                                                 | 
+| code_length	        | Nunber of lines of code (LOC) coded in this semester.                                                           | 
+| code_copy	            | Number of times a student copy codes.                                                                           | 
+| code_execution	    | Number of times a student execute codes.                                                                        | 
+| code_paste	        | Number of times a student paste codes.                                                                          | 
+| code_speed	        | Average input digits per minutes.                                                                               | 
+| notebook_open	        | Number of times a student open coding environment.                                                              |
+| tree_open	            | Number of times a student open a foder looking for a code.                                                      | 
+| AttributeError	    | Raised when attribute reference or assignment fails.                                                            | 
+| ConversionError	    | Failed to convert value(s) to axis units.                                                                       | 
+| FileExistsError	    | Raised when trying to create a file or directory which already exists.                                          | 
+| FileNotFoundError	    | Raised when a file or directory is requested but doesn’t exist.                                                 | 
+| IndentationError	    | Base class for syntax errors related to incorrect indentation.                                                  | 
+| IndexError	        | Raised when a sequence subscript is out of range.                                                               | 
+| JSONDecodeError	    | Raised if the given JSON document is not valid.                                                                 | 
+| KeyError	            | Raised when a mapping (dictionary) key is not found in the set of existing keys.                                | 
+| KeyboardInterrupt	    | Raised when the user hits the interrupt key (normally Control-C or Delete).                                     | 
+| LookupError	        | The base class for the exceptions that are raised when a key or index used on a mapping or sequence is invalid: IndexError, KeyError.  |
+| ModuleNotFoundError   | A subclass of ImportError which is raised by import when a module could not be located.                         |
+| NameError	            | Raised when a local or global name is not found.                                                                | 
+| OperationalError      | Exception raised for errors that are related to the database’s operation, and not necessarily under the control of the programmer.     |
+| SyntaxError	        | Raised when the parser encounters a syntax error.                                                               | 
+| TabError	            | Raised when indentation contains an inconsistent use of tabs and spaces.                                        | 
+| TypeError             | Raised when an operation or function is applied to an object of inappropriate type.                             | 
+| UnboundLocalError	    | Raised when a reference is made to a local variable in a function or method, but no value has been bound to that variable.             |
+| UnicodeDecodeError    | Raised when a Unicode-related error occurs during decoding.                                                     | 
+| ValueError	        | Raised when an operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as IndexError. |
+| ZeroDivisionError	    | Raised when the second argument of a division or modulo operation is zero. |
 
 ## Students' Strategy Inventory for Language Learning (SILL) measurement results
 | Feature               | Description                                                                                                     |        
@@ -121,38 +154,6 @@ To support the development of advanced methodologies in emerging sciences, data 
 | s_46	(Social)        | I ask for help from opensource communities.                                                                     |
 | s_47	(Social)        | I ask questions.                                                                                                |
 | s_48	(Social)        | I try to kearn about the style of coding.                                                                       |
-
-## Students' VisCode activities (learning behavior)
-| Feature               | Description                                                                                                     |        
-| --------------------- | --------------------------------------------------------------------------------------------------------------- |
-| userid	            | Anonymized student userid, eg: b1dfc5c6ec04d46d1823c5fa972ad320                                                 | 
-| code_length	        | Nunber of lines of code (LOC) coded in this semester.                                                           | 
-| code_copy	            | Number of times a student copy codes.                                                                           | 
-| code_execution	    | Number of times a student execute codes.                                                                        | 
-| code_paste	        | Number of times a student paste codes.                                                                          | 
-| code_speed	        | Average input digits per minutes.                                                                               | 
-| notebook_open	        | Number of times a student open coding environment.                                                              |
-| tree_open	            | Number of times a student open a foder looking for a code.                                                      | 
-| AttributeError	    | Raised when attribute reference or assignment fails.                                                            | 
-| ConversionError	    | Failed to convert value(s) to axis units.                                                                       | 
-| FileExistsError	    | Raised when trying to create a file or directory which already exists.                                          | 
-| FileNotFoundError	    | Raised when a file or directory is requested but doesn’t exist.                                                 | 
-| IndentationError	    | Base class for syntax errors related to incorrect indentation.                                                  | 
-| IndexError	        | Raised when a sequence subscript is out of range.                                                               | 
-| JSONDecodeError	    | Raised if the given JSON document is not valid.                                                                 | 
-| KeyError	            | Raised when a mapping (dictionary) key is not found in the set of existing keys.                                | 
-| KeyboardInterrupt	    | Raised when the user hits the interrupt key (normally Control-C or Delete).                                     | 
-| LookupError	        | The base class for the exceptions that are raised when a key or index used on a mapping or sequence is invalid: IndexError, KeyError.  |
-| ModuleNotFoundError   | A subclass of ImportError which is raised by import when a module could not be located.                         |
-| NameError	            | Raised when a local or global name is not found.                                                                | 
-| OperationalError      | Exception raised for errors that are related to the database’s operation, and not necessarily under the control of the programmer.     |
-| SyntaxError	        | Raised when the parser encounters a syntax error.                                                               | 
-| TabError	            | Raised when indentation contains an inconsistent use of tabs and spaces.                                        | 
-| TypeError             | Raised when an operation or function is applied to an object of inappropriate type.                             | 
-| UnboundLocalError	    | Raised when a reference is made to a local variable in a function or method, but no value has been bound to that variable.             |
-| UnicodeDecodeError    | Raised when a Unicode-related error occurs during decoding.                                                     | 
-| ValueError	        | Raised when an operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as IndexError. |
-| ZeroDivisionError	    | Raised when the second argument of a division or modulo operation is zero. |
 
 # Students' Self-regulated Learning (SRL) measurement results
 ## SRL Strategy
