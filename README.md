@@ -32,6 +32,35 @@ To support the development of advanced methodologies in emerging sciences, data 
     │   ├── viscode.csv         # Students' VisCode activities (learning behavior)    
 
 # Data Formats
+## Students' BookRoll activities (learning behavior)
+| Feature               | Description                                                                  |
+| userid                | Anonymized student userid, eg: b1dfc5c6ec04d46d1823c5fa972ad320              | 
+| ADD BOOKMARK	        | Added a bookmark to current page.                                            | 
+| ADD MARKER	        | Added a marker to current page.                                              | 
+| ADD MEMO	            | Added a memo to current page.                                                | 
+| ADD_HW_MEMO	        | Added a handwrite memo to current page.                                      | 
+| BOOKMARK_JUMP	        | Jump to a specific page with a bookmark.                                     | 
+| CHANGE MEMO	        | Modify the content of an existing memo on current page.                      | 
+| CLEAR_HW_MEMO         | Clear the content of an existing handwrite memo on current page.             | 
+| CLOSE	                | Closed the book.                                                             | 
+| CLOSE_RECOMMENDATION	| Deleted an exist bookmark in the e-book.                                     | 
+| DELETE BOOKMARK	    | Deleted a bookmark on current page.                                          | 
+| DELETE MARKER	        | Deleted a marker on current page.                                            | 
+| DELETE_MEMO	        | Deleted a memo on current page.                                              | 
+| GETIT	                | Press the smiley face icon to indicate the understanding on current page.    | 
+| MEMO_JUMP	            | Select a note to jump to the specific page.                                  | 
+| NEXT	                | Went to the next page.                                                       | 
+| NOTGETIT	            | Press the crying face icon to indicate the misunderstanding on current page. | 
+| OPEN	                | Opened the book.                                                             | 
+| OPEN_RECOMMENDATION   | 	                                                                           | 
+| PAGE_JUMP	            | Jumped to a particular page.                                                 | 
+| PREV	                | Went to the previous page.                                                   | 
+| REGIST CONTENTS	    |                                                                              | 
+| SEARCH	            | Searched for something within the e-book.                                    | 
+| SEARCH_JUMP	        | Jumped to a page from the search results.                                    | 
+| UNDO_HW_MEMO	        | Undo the last action of handwriting.                                         | 
+
+
 ## SRL Strategy
 | Feature  | Description                                                                                                     |
 | -------- | --------------------------------------------------------------------------------------------------------------- |
