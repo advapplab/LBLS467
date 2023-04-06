@@ -80,13 +80,22 @@ To support the development of advanced methodologies in emerging sciences, data 
 | code_paste	        | Number of times a student paste codes.                                                                          | 
 | code_speed	        | Average input digits per minutes.                                                                               | 
 | notebook_open	        | Number of times a student open coding environment.                                                              |
-| tree_open	            | Number of times a student open a foder looking for a code.                                                      | 
-| AttributeError	    | Raised when attribute reference or assignment fails.                                                            | 
-| ConversionError	    | Failed to convert value(s) to axis units.                                                                       | 
+| tree_open	            | Number of times a student open a foder looking for a code.                                                      |
+| AssertionError        | Raised when the assert statement fails.                                                                         |
+| AttributeError	    | Raised when attribute reference or assignment fails.                                                            |
+| AxisError             | Axis supplied was invalid.                                                                                      |
+| ConversionError	    | Failed to convert value(s) to axis units.                                                                       |
+| DataError             | This exception is raised when there were problems with the data.                                                |
+| EmptyDataError        | Exception raised in pd.read_csv when empty data or header is encountered.                                       |
+| Exception             | Occurs during the execution of a program that disrupts the normal flow of the program's instructions.           |
 | FileExistsError	    | Raised when trying to create a file or directory which already exists.                                          | 
 | FileNotFoundError	    | Raised when a file or directory is requested but doesn’t exist.                                                 | 
+| HTTPError             | An HTTPError is raised when an HTTP request returns a status code that represents an error, such as 4xx or 5xx. |
+| ImportError           | Raised when the imported module is not found.                                                                   |
 | IndentationError	    | Base class for syntax errors related to incorrect indentation.                                                  | 
 | IndexError	        | Raised when a sequence subscript is out of range.                                                               | 
+| IndexingError         | Exception is raised when trying to index and there is a mismatch in dimensions.                                 |
+| InvalidURL            | URL has an invalid label for the URL which has underscored in it.                                               |
 | JSONDecodeError	    | Raised if the given JSON document is not valid.                                                                 | 
 | KeyError	            | Raised when a mapping (dictionary) key is not found in the set of existing keys.                                | 
 | KeyboardInterrupt	    | Raised when the user hits the interrupt key (normally Control-C or Delete).                                     | 
@@ -94,13 +103,26 @@ To support the development of advanced methodologies in emerging sciences, data 
 | ModuleNotFoundError   | A subclass of ImportError which is raised by import when a module could not be located.                         |
 | NameError	            | Raised when a local or global name is not found.                                                                | 
 | OperationalError      | Exception raised for errors that are related to the database’s operation, and not necessarily under the control of the programmer.     |
+| OSError               | Raised when a system operation causes a system-related error.                                                   |
+| OverflowError         | Raised when the result of an arithmetic operation is too large to be represented.                               |
+| ParserError           | Exception that is raised by an error encountered in parsing file contents.                                      |
+| RecursionError        | An exception that occurs when the maximum recursion depth is exceeded.                                          |
+| RuntimeError          | Raised when an error does not fall under any other category.                                                    |
+| SelectorSyntaxError   | Parsing a selector that does not match the grammar.                                                             |
+| SpecificationError    | Exception raised by agg when the functions are ill-specified.                                                   |
+| StopIteration         | Raised by the next() function to indicate that there is no further item to be returned by the iterator.         |
 | SyntaxError	        | Raised when the parser encounters a syntax error.                                                               | 
 | TabError	            | Raised when indentation contains an inconsistent use of tabs and spaces.                                        | 
+| TclError              | Trying to access widgets while there's none                                                                     |
 | TypeError             | Raised when an operation or function is applied to an object of inappropriate type.                             | 
+| UFuncTypeError        | A datatype mismatch in string concatenation in np.load(...)                                                     |
+| UndefinedVariableError| Exception raised by query or eval when using an undefined variable name.                                        |
 | UnboundLocalError	    | Raised when a reference is made to a local variable in a function or method, but no value has been bound to that variable.             |
 | UnicodeDecodeError    | Raised when a Unicode-related error occurs during decoding.                                                     | 
 | ValueError	        | Raised when an operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as IndexError. |
-| ZeroDivisionError	    | Raised when the second argument of a division or modulo operation is zero. |
+| WebDriverException    | Occurs if the given session id is not in the list of active sessions                                            |
+| XLRDError             | Not supported xlsx file                                                                                         |
+| ZeroDivisionError	    | Raised when the second argument of a division or modulo operation is zero.                                      |
 
 ## Students' Strategy Inventory for Language Learning (SILL) measurement results
 | Feature               | Description                                                                                                     |        
