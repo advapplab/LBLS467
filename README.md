@@ -184,6 +184,9 @@ To support the development of advanced methodologies in emerging sciences, data 
 | s_47	(Social)        | I ask questions.                                                                                                |
 | s_48	(Social)        | I try to kearn about the style of coding.                                                                       |
 
+
+![sill](https://user-images.githubusercontent.com/61023223/230417483-468e2609-4545-4141-8021-e8292aafd5c6.png)
+
 # Students' Self-regulated Learning (SRL) measurement results
 ## SRL Strategy
 | Feature  | Description                                                                                                     |
@@ -241,6 +244,10 @@ To support the development of advanced methodologies in emerging sciences, data 
 | srl_s_50 | (Help Seeking) I try to identify students in this class whom I can ask for help if necessary. |
 
 
+![srl_strategy](https://user-images.githubusercontent.com/61023223/230419150-923ae086-32ed-46b2-8a0c-8b9e5d087db7.png)
+
+
+
 ## SRL Motivation
 | Feature  | Description                                                                                                     |
 | -------- | --------------------------------------------------------------------------------------------------------------- |
@@ -277,7 +284,9 @@ To support the development of advanced methodologies in emerging sciences, data 
 | srl_m_30 | (Test Anxiety) I have an uneasy, upset feeling when I take an exam. |
 | srl_m_31 | (Test Anxiety) I feel my heart beating fast when I take an exam. |
 
+![srl_motivation](https://user-images.githubusercontent.com/61023223/230417540-7a7be7e5-e6b8-4e67-baae-07f92d2d089e.png)
 
+## ALL Questionario
 ![all_questionario](https://user-images.githubusercontent.com/61023223/230403852-7e09365b-d015-48d5-821a-845259369831.png)
 For other feature details, please refer to : https://github.com/advapplab/LBLS160
 
