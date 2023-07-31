@@ -1,5 +1,4 @@
 # 1: --------------- PREPARE PACKAGES ---------------#
-setwd('/Users/jasperhewitt/Desktop')
 #install packages if not done so before
 #install.packages('tidyverse')
 #install.packages('ggplot2')
@@ -15,20 +14,14 @@ library('gridExtra')
 library('ggExtra')
 
 
-# 2: --------------- GET DATA ---------------#
+# 2: --------------- GET AND PREPROCESS DATA ---------------#
 
 #the full data set can be found here: https://github.com/advapplab/LBLS467/tree/main/data
 
-#get score_csv
-
-#get bookroll csv
-df<-read.csv("https://raw.githubusercontent.com/advapplab/LBLS467/main/data/br.csv")
-
-#get viscode csv
-viscode_df<-read.csv("https://raw.githubusercontent.com/advapplab/LBLS467/main/data/viscode.csv")
-
-#get standardized version fo bookroll and viscode 
+#get standardized version fo bookroll and standard 
 standard_df<-read.csv("https://raw.githubusercontent.com/advapplab/LBLS467/main/data/standard.csv")
+
+#delete rows where with more than 30 columns that contain an NA value (empty rows except for scores) 
 standard_df <- standard_df[rowSums(is.na(standard_df)) <= 30, ]
 
 
@@ -36,19 +29,8 @@ standard_df <- standard_df[rowSums(is.na(standard_df)) <= 30, ]
 
 #info on boxplots https://www.sharpsightlabs.com/blog/ggplot-boxplot/
 
-#get average scores per class
-viscode_df_class<-viscode_df %>% 
-  group_by(class) %>% 
-  summarise(mean=mean(score))
-
-#see how many students failed 
-count_below_60 <- viscode_df %>% 
-  filter(score < 60) %>% 
-  group_by(class) %>% 
-  summarise(n = n())
-
 #simple plot 
-ggplot(viscode_df, aes(x = class, y = score)) +
+ggplot(standard_df, aes(x = class, y = score)) +
   geom_boxplot() +
   labs(x = "Class", y = "Score") +
   theme_minimal() +
@@ -56,7 +38,7 @@ ggplot(viscode_df, aes(x = class, y = score)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 #get failcount and failrate per class 
-count_failrate <- viscode_df %>% 
+count_failrate <- standard_df %>% 
   mutate(fail = ifelse(score < 60, 1, 0)) %>%
   group_by(class) %>%
   summarise(total = n(),
@@ -64,11 +46,11 @@ count_failrate <- viscode_df %>%
             fail_rate = round((fail_count / total * 100), 1)) #one decimal
 
 #merge together
-viscode_df<-merge(viscode_df, count_failrate, by = "class")
+standard_df<-merge(standard_df, count_failrate, by = "class")
 
 #final boxplot
-ggplot(viscode_df, aes(x = class, y = score)) +
-  geom_boxplot(aes(fill = class)) + #change the colour. fill = 'red' will change all of the boxes to red. We want every class to have a different colour so we input: class
+ggplot(standard_df, aes(x = class, y = score)) +
+  geom_boxplot(aes(fill = class)) + #change the colour
   geom_label(aes(label = paste0("< 60: ", fail_count), y = 106), #input the fail_count variable that we created
              vjust = 0,
              size = 3,
@@ -91,14 +73,14 @@ ggplot(viscode_df, aes(x = class, y = score)) +
 
 # 4: --------------- interactions influence on score (scatter plot) ---------------#
 
-#let's see how the students' interactions with Bookroll and viscode influence the total interactions on the score. 
+#let's see how the students' interactions with Bookroll and standard influence the total interactions on the score. 
 
 #print names of the columns to decide which ones to accumulate
 names(standard_df)
 
-#we want to accumulate everything except 'userid', 'class', 'score', and 'viscode.spent_time'
+#we want to accumulate everything except 'userid', 'class', 'score', and 'standard.spent_time'
 standard_df <- standard_df %>%
-  mutate(total_interactions = rowSums(select(., -c('userid', 'score', 'class', 'Viscode.spent_time'))))
+  mutate(total_interactions = rowSums(select(., -c('userid', 'score', 'class', 'standard.spent_time'))))
 
 # Standardize 'total_interactions' column
 standard_df$total_interactions <- scale(standard_df$total_interactions)
@@ -401,7 +383,7 @@ ggplot(standard_df, aes(x = score_group, y = total_interactions, fill = score_gr
 
 #errors for students above and below 80
 # Define columns to exclude
-exclude_cols <- c("userid", "score", "class", "Viscode.spent_time")
+exclude_cols <- c("userid", "score", "class", "standard.spent_time")
 
 # Create a vector of columns containing 'Error'
 error_cols <- colnames(standard_df)[grepl("Error", colnames(standard_df))]
@@ -438,7 +420,7 @@ selected_cols <- c("ADD.BOOKMARK", "ADD.MARKER", "ADD.MEMO", "ADD_HW_MEMO",
                    "SEARCH", "SEARCH_JUMP", "UNDO_HW_MEMO")
 
 # Define columns to exclude
-exclude_cols <- c("userid", "score", "class", "Viscode.spent_time")
+exclude_cols <- c("userid", "score", "class", "standard.spent_time")
 
 # Add 'score' to the vector of selected columns (necessary for grouping)
 selected_cols <- c(selected_cols, "score")
