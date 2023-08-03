@@ -156,7 +156,37 @@ ggMarginal(p, type = "histogram", #specify type of plot
            groupFill = TRUE) #set color same as dots
 
 
-#----------------- BONUS: different variable means for students with grades higher than 80 and lower than 80 ------------------#
+#----------------- BONUS: high score and low score groups error comparison ------------------#
+
+# Create a vector of columns containing 'Error'
+error_cols <- colnames(standard_df)[grepl("Error", colnames(standard_df))]
+
+mean_df <- standard_df %>%
+  #create new column 'score_group' that categorizes students into two groups: 
+  #score above 80 and score lower than 80
+  mutate(score_group = ifelse(score > 80, "Over 80", "Below 80")) %>%
+  #group data by the new score_group
+  group_by(score_group) %>%
+  #for each score_group, calculate the mean of each error column 
+  summarise(across(one_of(error_cols), mean, na.rm = TRUE), .groups = "drop") %>%
+  #put data in long format for plot. make every column into its own row 
+  pivot_longer(cols = -score_group, names_to = "variable", values_to = "mean")
+
+# Plotting
+ggplot(mean_df, aes(x = variable, y = mean, fill = score_group)) + #set x and y axis
+  geom_col(position = "dodge") + #specify we want a dodged bar plot (diverging)
+  coord_flip() + #flip the plot to the side
+  labs(x = "Variables", y = "Average", fill = "Score Group") + #specify labels
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) #basic settings
+
+
+
+
+
+
+
+# ------------------------ EXTRA: sideways boxplot comparing high scoring and low scoring students -------------------# 
 
 
 # Add a new column to your dataframe that categorizes the students based on their scores
@@ -194,35 +224,9 @@ ggplot(standard_df, aes(x = score_group, y = total_interactions, fill = score_gr
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 
-#errors for students above and below 80
-# Define columns to exclude
-exclude_cols <- c("userid", "score", "class", "Viscode.spent_time")
-
-# Create a vector of columns containing 'Error'
-error_cols <- colnames(standard_df)[grepl("Error", colnames(standard_df))]
-
-# Add 'score' to the vector of selected columns (necessary for grouping)
-selected_cols <- c(error_cols, "score")
-
-# Compute means for each group and keep it in the same dataframe
-mean_df <- standard_df %>%
-  select(one_of(selected_cols)) %>%
-  mutate(score_group = ifelse(score > 80, "Over 80", "Below 80")) %>%
-  group_by(score_group) %>%
-  summarise(across(-one_of(exclude_cols), mean, na.rm = TRUE)) %>%
-  pivot_longer(cols = -score_group, names_to = "variable", values_to = "mean")
-
-# Plotting
-ggplot(mean_df, aes(x = variable, y = mean, fill = score_group)) +
-  geom_col(position = "dodge") +
-  coord_flip() +
-  labs(x = "Variables", y = "Average", fill = "Score Group") +
-  theme_bw() +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
-
-names(standard_df)
 
 
+#bookroll 
 
 # Define the columns you're interested in
 selected_cols <- c("ADD.BOOKMARK", "ADD.MARKER", "ADD.MEMO", "ADD_HW_MEMO", 
@@ -253,9 +257,6 @@ ggplot(mean_df, aes(x = variable, y = mean, fill = score_group)) +
   labs(x = "Variables", y = "Average", fill = "Score Group") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
-
-
-
 
 
 
