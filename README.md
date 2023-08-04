@@ -6,15 +6,15 @@ To support the development of advanced methodologies in emerging sciences, data 
 ## Check List
 | Class     | Participants | SRL Learning Motivation | SRL Learning Strategy | SILL | BookRoll | Viscode | Score |
 | --------- | ------------ | ----------------------- | --------------------- | ---- | -------- | ------- | ----- |
-| 1091-NCU  | 53           |                         |                       |      | V        | V       | V     |
-| 1092-NCUA | 63           | V                       | V                     | V    | V        | V       | V     |
-| 1092-NCUB | 56           | V                       | V                     | V    | V        | V       | V     |
-| 1101-NCUA | 51           | V                       | V                     | V    | V        | V       | V     |
-| 1101-NCUB | 50           | V                       | V                     | V    | V        | V       | V     |
-| 1101-NTUT | 38           | V                       | V                     |      | V        | V       | V     |
-| 1102-NCU  | 41           | V                       | V                     | V    | V        | V       | V     |
-| 1111-NCU  | 56           | V                       | V                     |      | V        | V       | V     |
-| 1111-NCCU | 59           |                         |                       |      | V        | V       | V     |
+| 1091      | 53           |                         |                       |      | V        | V       | V     |
+| 1092A     | 63           | V                       | V                     | V    | V        | V       | V     |
+| 1092B     | 56           | V                       | V                     | V    | V        | V       | V     |
+| 1101A     | 51           | V                       | V                     | V    | V        | V       | V     |
+| 1101B     | 50           | V                       | V                     | V    | V        | V       | V     |
+| 1101      | 38           | V                       | V                     |      | V        | V       | V     |
+| 1102      | 41           | V                       | V                     | V    | V        | V       | V     |
+| 1111A     | 56           | V                       | V                     |      | V        | V       | V     |
+| 1111B     | 59           |                         |                       |      | V        | V       | V     |
 | Record    | 467          | 304                     | 294                   | 254  | 461      | 452     | 467   | 
 
 
